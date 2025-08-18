@@ -1,74 +1,8 @@
-# Cheat-Engine-Table-for-Minecraft-Windows-10-Edition-v1.1.5
+# Cheat Engine | Table for Minecraft: Windows 10 Edition v1.1.5
+Minecraft: Windows 10 Edition is a customized version of Minecraft: Bedrock Edition for the Windows 10 operating system. It was designed to provide cross-platform play with other devices that support Bedrock Edition, such as consoles, mobile devices, and other Windows 10 computers. This edition is currently no longer being updated and has been replaced by Bedrock Edition.
 ## Possible problems:
-Table created for **Minecraft: Windows 10 Edition V1.1.5**
+- The table was created exclusively for Minecraft: Windows 10 | Version 1.1.5
+- Absence cheat engine
 ## For start:
-Download [Cheat Engine](https://github.com/cheat-engine/cheat-engine) -> Run File
-
-## Nobody will need (Minecraft: Windows 10 Editon v0.15.10):
-
-- Fast Eat
-```Lua
-[ENABLE]
-
-aobscanmodule(INJECT,Minecraft.Win10.DX11.exe,8B 83 78 0F 00 00 EB 05 48 8B CB FF D2 66) // should be unique
-alloc(newmem,$1000,INJECT)
-
-label(code)
-label(return)
-
-newmem:
-
-code:
-  mov [rbx+00000F78],1
-  jmp return
-
-INJECT:
-  jmp newmem
-  nop
-return:
-registersymbol(INJECT)
-
-[DISABLE]
-
-INJECT:
-  db 8B 83 78 0F 00 00
-
-unregistersymbol(INJECT)
-dealloc(newmem)
-```
-- Reach static adress
-```Lua
-  Minecraft.Win10.DX11.exe+B52A70
-```
-- HitBox
-``` Lua
-[ENABLE]
-
-aobscanmodule(INJECT,Minecraft.Win10.DX11.exe,F3 0F 10 81 D0 00 00 00 C3) // should be unique
-alloc(newmem,$1000,INJECT)
-
-label(code)
-label(return)
-
-newmem:
-
-code:
-  mov [rcx+000000D0],(float)8
-  jmp return
-
-INJECT:
-  jmp newmem
-  nop 3
-return:
-
-registersymbol(INJECT)
-
-[DISABLE]
-
-INJECT:
-  db F3 0F 10 81 D0 00 00 00
-
-unregistersymbol(INJECT)
-dealloc(newmem)
-```
-
+- Download ([Cheat Engine](https://github.com/cheat-engine/cheat-engine)).
+  - Run release file.
